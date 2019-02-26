@@ -1,0 +1,23 @@
+{
+  "name": "ioredis-koa",
+  "description": "Redis storage for koa application or session middleware/cache",
+  "version": "0.0.3",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "koa",
+    "koa2",
+    "middleware",
+    "session",
+    "ioredis"
+  ],
+  "author": "zhangke <zhkmail@foxmail.com>",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "ioredis": "^4.6.2"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "license": "MIT"
+}
