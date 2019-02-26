@@ -2,18 +2,24 @@
   "name": "ioredis-koa",
   "description": "Redis storage for koa application or session middleware/cache",
   "version": "0.1.1",
+  "bugs": {
+    "url": "https://github.com/godky/ioredis-koa/issues"
+  },
+  "repository": "godky/ioredis-koa",
   "main": "./lib/index.js",
   "scripts": {
     "build": "babel ./src/index.js -o ./lib/index.js",
     "publish": "git add . && git cm -m 'update' && git ps && npm publish",
     "test": "jest --detectOpenHandles"
   },
+  "homepage": "https://github.com/godky/ioredis-koa",
   "keywords": [
     "koa",
     "koa2",
     "middleware",
     "session",
-    "ioredis"
+    "ioredis",
+    "redis"
   ],
   "author": "zhangke <zhkmail@foxmail.com>",
   "dependencies": {
