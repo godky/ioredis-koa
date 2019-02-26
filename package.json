@@ -1,9 +1,13 @@
 {
   "name": "ioredis-koa",
   "description": "Redis storage for koa application or session middleware/cache",
-  "version": "0.0.3",
-  "main": "index.js",
-  "scripts": {},
+  "version": "0.1.0",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "babel ./src/index.js -o ./lib/index.js",
+    "publish": "git add . && git cm - 'update' && git ps && npm publish",
+    "test": "jest --detectOpenHandles"
+  },
   "keywords": [
     "koa",
     "koa2",
@@ -19,5 +23,10 @@
   "engines": {
     "node": ">= 6"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "jest": "^24.1.0"
+  }
 }
