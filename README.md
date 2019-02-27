@@ -40,6 +40,14 @@ Redis storage for koa application or session middleware/cache.
   - redis client: `ioredis-koa` is same as [ioredis](https://github.com/luin/ioredis) (A robust, performance-focused and full-featured Redis client for Node.js)
   - session: `ioredis-koa` works with [koa-generic-session](https://github.com/koajs/generic-session) (a generic session middleware for koa).
 
+## Quick Start
+
+### Install
+
+```
+npm install ioredis-koa
+```
+
 ### Example
 
 #### as a redis client for application
@@ -68,7 +76,7 @@ redis.set('key', 100, 'EX', 10);
 ```
 See [more examples](https://www.npmjs.com/package/ioredis) of `ioredis`.
 
-#### as a session middleware
+#### as a session middleware, redis cluster enabled!
 
 These are some the funcitons that koa-generic-session uses that you can use manually. You will need to inintialize differently than the example above:
 
@@ -90,8 +98,7 @@ For more examples, please see the [examples folder of `koa-generic-session`](htt
 ### Options
 
  - *all [`ioredis`](https://www.npmjs.com/package/ioredis)options*
-
- - **DEPRECATED:** old options - `pass` and `socket` have been replaced by `auth_pass` and `path`, but they should be backwards compatible (still work).
+* [API Documentation]([API.md](https://github.com/luin/ioredis/blob/HEAD/API.md))
 
 
 ## Testing
