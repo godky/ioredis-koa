@@ -1,22 +1,26 @@
 ioredis-koa
 =========
 
-<!-- [![build status][travis-image]][travis-url]
-[![Coveralls][coveralls-image]][coveralls-url]
+<!-- [![Coveralls][coveralls-image]][coveralls-url]
 [![David deps][david-image]][david-url]
 [![David devDeps][david-dev-image]][david-dev-url] -->
+[![build status][travis-image]][travis-url]
 [![NPM version][npm-image]][npm-url]
 [![node version][node-image]][node-url]
 [![npm download][download-image]][download-url]
 [![license][license-image]][license-url]
 
+[travis-image]: https://img.shields.io/travis/godky/ioredis-koa.svg?style=flat-square
+[travis-url]: https://travis-ci.org/godky/ioredis-koa
 [npm-image]: https://img.shields.io/npm/v/ioredis-koa.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/ioredis-koa
-
-
-<!-- [travis-image]: https://img.shields.io/travis/koajs/ioredis-koa.svg?style=flat-square
-[travis-url]: https://travis-ci.org/koajs/ioredis-koa
-[coveralls-image]: https://img.shields.io/coveralls/koajs/ioredis-koa.svg?style=flat-square
+[node-image]: https://img.shields.io/node/v/ioredis-koa.svg?style=flat-square
+[node-url]: http://nodejs.org/download/
+[download-image]: https://img.shields.io/npm/dm/ioredis-koa.svg?style=flat-square
+[download-url]: https://npmjs.org/package/ioredis-koa
+[license-image]: https://img.shields.io/npm/l/ioredis-koa.svg?style=flat-square
+[license-url]: https://github.com/koajs/ioredis-koa/blob/master/LICENSE
+<!-- [coveralls-image]: https://img.shields.io/coveralls/koajs/ioredis-koa.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/koajs/ioredis-koa?branch=master
 [david-image]: https://img.shields.io/david/koajs/ioredis-koa.svg?style=flat-square&label=deps
 [david-url]: https://david-dm.org/koajs/ioredis-koa
@@ -24,12 +28,6 @@ ioredis-koa
 [david-dev-url]: https://david-dm.org/koajs/ioredis-koa#info=devDependencies
 [david-opt-image]: https://img.shields.io/david/optional/koajs/ioredis-koa.svg?style=flat-square&label=optDeps
 [david-opt-url]: https://david-dm.org/koajs/ioredis-koa#info=devDependencies -->
-[node-image]: https://img.shields.io/node/v/ioredis-koa.svg?style=flat-square
-[node-url]: http://nodejs.org/download/
-[download-image]: https://img.shields.io/npm/dm/ioredis-koa.svg?style=flat-square
-[download-url]: https://npmjs.org/package/ioredis-koa
-[license-image]: https://img.shields.io/npm/l/ioredis-koa.svg?style=flat-square
-[license-url]: https://github.com/koajs/ioredis-koa/blob/master/LICENSE
 
 Redis storage for koa application or session middleware/cache.
 
