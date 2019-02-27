@@ -27,7 +27,7 @@
     "ioredis": "^4.6.2"
   },
   "engines": {
-    "node": ">= 6"
+    "node": ">=8.0.0"
   },
   "license": "MIT",
   "devDependencies": {
