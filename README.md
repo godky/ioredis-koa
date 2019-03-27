@@ -19,15 +19,15 @@ ioredis-koa
 [download-image]: https://img.shields.io/npm/dm/ioredis-koa.svg?style=flat-square
 [download-url]: https://npmjs.org/package/ioredis-koa
 [license-image]: https://img.shields.io/npm/l/ioredis-koa.svg?style=flat-square
-[license-url]: https://github.com/koajs/ioredis-koa/blob/master/LICENSE
-<!-- [coveralls-image]: https://img.shields.io/coveralls/koajs/ioredis-koa.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/koajs/ioredis-koa?branch=master
-[david-image]: https://img.shields.io/david/koajs/ioredis-koa.svg?style=flat-square&label=deps
-[david-url]: https://david-dm.org/koajs/ioredis-koa
-[david-dev-image]: https://img.shields.io/david/dev/koajs/ioredis-koa.svg?style=flat-square&label=devDeps
-[david-dev-url]: https://david-dm.org/koajs/ioredis-koa#info=devDependencies
-[david-opt-image]: https://img.shields.io/david/optional/koajs/ioredis-koa.svg?style=flat-square&label=optDeps
-[david-opt-url]: https://david-dm.org/koajs/ioredis-koa#info=devDependencies -->
+[license-url]: https://github.com/godky/ioredis-koa/blob/master/LICENSE
+<!-- [coveralls-image]: https://img.shields.io/coveralls/godky/ioredis-koa.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/godky/ioredis-koa?branch=master
+[david-image]: https://img.shields.io/david/godky/ioredis-koa.svg?style=flat-square&label=deps
+[david-url]: https://david-dm.org/godky/ioredis-koa
+[david-dev-image]: https://img.shields.io/david/dev/godky/ioredis-koa.svg?style=flat-square&label=devDeps
+[david-dev-url]: https://david-dm.org/godky/ioredis-koa#info=devDependencies
+[david-opt-image]: https://img.shields.io/david/optional/godky/ioredis-koa.svg?style=flat-square&label=optDeps
+[david-opt-url]: https://david-dm.org/godky/ioredis-koa#info=devDependencies -->
 
 Redis storage for koa application or session middleware/cache.
 
