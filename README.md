@@ -29,7 +29,7 @@ ioredis-koa
 [david-opt-image]: https://img.shields.io/david/optional/godky/ioredis-koa.svg?style=flat-square&label=optDeps
 [david-opt-url]: https://david-dm.org/godky/ioredis-koa#info=devDependencies -->
 
-Redis storage for koa application or session middleware/cache.
+Redis storage for koa application or session middleware/cache,which supports cluster.
 
 [![NPM](https://nodei.co/npm/ioredis-koa.svg?downloads=true)](https://nodei.co/npm/ioredis-koa/)
 
@@ -50,10 +50,42 @@ npm install ioredis-koa
 
 #### as a redis client for application
 
+- init a single node
+
 ```js
 var Redis = require('ioredis-koa');
-var redis = new Redis();
- 
+var redis = new Redis({
+  port: 6379,          // Redis port
+  host: '127.0.0.1',   // Redis host
+  family: 4,           // 4 (IPv4) or 6 (IPv6)
+  password: 'auth',
+  db: 0
+});
+
+```
+
+- init a redis cluser
+
+```js
+
+var Redis = require('ioredis-koa');
+var redis = new Redis([{
+  port: 6380,
+  host: '127.0.0.1'
+}, {
+  port: 6381,
+  host: '127.0.0.1'
+}],{
+  redisOptions: {
+    password: 'your-cluster-password'
+  }
+});
+
+```
+
+- useage example:
+
+```js
 redis.set('foo', 'bar');
 redis.get('foo', function (err, result) {
   console.log(result);
@@ -74,15 +106,23 @@ redis.set('key', 100, 'EX', 10);
 ```
 See [more examples](https://www.npmjs.com/package/ioredis) of `ioredis`.
 
-#### as a session middleware, redis cluster enabled!
+#### as a session middleware
 
 These are some the funcitons that koa-generic-session uses that you can use manually. You will need to inintialize differently than the example above:
 
 ```js
 
 var session = require('koa-generic-session');
-var redisStore = require('ioredis-koa')({
-  // Options specified here
+var redisStore = require('ioredis-koa')([{
+  port: 6380,
+  host: '127.0.0.1'
+}, {
+  port: 6381,
+  host: '127.0.0.1'
+}],{
+  redisOptions: {
+    password: 'your-cluster-password'
+  }
 });
 var app = require('koa')();
 
@@ -91,11 +131,12 @@ app.use(session({
   store: redisStore
 }));
 ```
-For more examples, please see the [examples folder of `koa-generic-session`](https://github.com/koajs/generic-session/tree/master/example).
+
+For more examples, please see the [examples folder](https://github.com/koajs/generic-session/tree/master/example) of `koa-generic-session`.
 
 ### Options
 
- - *all [`ioredis`](https://www.npmjs.com/package/ioredis)options*
+ - all [**`ioredis`**](https://www.npmjs.com/package/ioredis)options
 * [API Documentation]([API.md](https://github.com/luin/ioredis/blob/HEAD/API.md))
 
 
