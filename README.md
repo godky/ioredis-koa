@@ -137,7 +137,7 @@ For more examples, please see the [examples folder](https://github.com/koajs/gen
 ### Options
 
  - all [**`ioredis`**](https://www.npmjs.com/package/ioredis)options
-* [API Documentation]([API.md](https://github.com/luin/ioredis/blob/HEAD/API.md))
+* [API Documentation](https://github.com/luin/ioredis/blob/HEAD/API.md)
 
 
 ## Testing

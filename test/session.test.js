@@ -7,6 +7,6 @@
 
 // app.listen(8000);
 
-test('koa session get and set', async() => {
+test('koa session get and set', function() {
   
 })
