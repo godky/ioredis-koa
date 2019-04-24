@@ -1,7 +1,7 @@
 {
   "name": "ioredis-koa",
   "description": "Redis storage for koa application or session middleware/cache,which supports cluster",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "bugs": {
     "url": "https://github.com/godky/ioredis-koa/issues"
   },
@@ -9,7 +9,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "build": "babel ./src/index.js -o ./lib/index.js  --presets=@babel/preset-env",
-    "publish": "git add . && git cm -m 'version update' && git ps",
+    "publish": "git add . && git cm -m 'version_update' && git ps",
     "test": "jest --detectOpenHandles"
   },
   "homepage": "https://github.com/godky/ioredis-koa",
