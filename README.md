@@ -35,8 +35,9 @@ Redis storage for koa application or session middleware/cache,which supports clu
 
 ## Usage
 
+  - koa middleware: redis middleware for Koa
   - redis client: `ioredis-koa` is same as [ioredis](https://github.com/luin/ioredis) (A robust, performance-focused and full-featured Redis client for Node.js)
-  - session: `ioredis-koa` works with [koa-generic-session](https://github.com/koajs/generic-session) (a generic session middleware for koa).
+  - session: `ioredis-koa` works with [koa-generic-session](https://github.com/koajs/generic-session) (a generic session middleware for koa) and supports cluster mode.
 
 ## Quick Start
 
@@ -48,7 +49,30 @@ npm install ioredis-koa
 
 ### Example
 
-#### as a redis client for application
+#### as koa middleware
+
+```js
+
+var Koa = require('koa');
+var redisMid = require('ioredis-koa').middleware;
+var app = new Koa();
+
+app.use(redisMid({
+  port: 6379,          // Redis port
+  host: '127.0.0.1',   // Redis host
+  family: 4,           // 4 (IPv4) or 6 (IPv6)
+  password: 'auth',
+  db: 0
+}))
+app.use(async (ctx, next) => {
+  await ctx.redis.set('foo', 1); //'ok'
+  console.log(await ctx.redis.get('foo'));  // 1
+})
+app.listen(3000)
+
+```
+
+#### as a redis client
 
 - init a single node
 
